@@ -36,3 +36,35 @@ for item in lst:
     print("Item:{0}".format(item))
 
 print("테스트{0} {1}".format(value, value))
+
+print("---range함수---")
+print( list(range(10)))
+print( list(range(1,11)))
+print( list(range(2000,2023))) #년도 범위 잡을때 유용함
+
+print("---리스트 내장---")
+lst = list(range(1,11))
+print( [i**2 for i in lst if i > 5])
+tp = ("apple", "orange", "kiwi")
+print( [len(i) for i in tp])
+
+
+print("---필터링 없음---")
+lst = [20, 25, 30]
+iterL = filter(None, lst)
+for item in iterL:
+    print(item)
+
+print("---필터링 있음 : 일종의 조건문---")
+def getBiggerThan20(i):
+    return i > 20   
+
+lst = [20, 25, 30]
+iterL = filter(getBiggerThan20, lst)
+for item in iterL:
+    print(item)
+
+print("---람다함수 사용 : 일회용함수---")
+iterL = filter(lambda x:x>20, lst)
+for item in iterL:
+    print(item)
