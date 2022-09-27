@@ -34,3 +34,5 @@ for item in lst:
     if item % 2 == 0:
         continue
     print("Item:{0}".format(item))
+
+print("테스트{0} {1}".format(value, value))
