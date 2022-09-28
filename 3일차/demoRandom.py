@@ -25,4 +25,11 @@ print(getsize("c:\\python39\\python.exe"))
 #운영체제 정보
 from os import *
 print("운영체제:", name)
-system("notepad.exe")
+#system("notepad.exe")
+
+#파일리스트
+import glob
+print(glob.glob("c:\\work\\3일차\\*.py"))
+result = glob.glob("c:\\work\\3일차\\*.py")  #리스트로 리턴
+for item in result:
+    print(item)
