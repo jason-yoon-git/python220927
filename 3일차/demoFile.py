@@ -36,5 +36,14 @@ print( f.tell() )
 #리셋
 f.seek(0)
 lst = f.readlines()
-print(lst)
+#print(lst)
+for item in lst:
+    #print(item) #빈줄이 나옴, print함수는 출력하고 마지막에 줄을 바꿈
+    print(item, end="") #"" => \n
+
+print("---한줄씩 처리---")
+f.seek(0)
+print( f.readline(), end="" )
+print( f.readline(), end="" )
+
 f.close()
