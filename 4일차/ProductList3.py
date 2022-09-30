@@ -8,7 +8,7 @@ import os.path
 #DB파일이 없으면 만들고 있다면 접속한다. 
 if os.path.exists("ProductList.db"):
     con = sqlite3.connect("ProductList.db")
-    cur = con.cursor()
+    cur = con.cursor() 
 else: 
     con = sqlite3.connect("ProductList.db")
     cur = con.cursor()
